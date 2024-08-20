@@ -244,18 +244,48 @@ form button:hover {
 
 @media (max-width: 600px) {
     .header {
-        flex-wrap: wrap; /* Allows the nav to move below the logo only on small screens */
+        flex-direction: column;
+        align-items: center; /* Center-align the items in the header */
+        text-align: center; /* Center text alignment */
     }
 
     .nav {
-        flex-direction: column; /* Stack links vertically on small screens */
-        width: 100%; /* Ensure the nav takes the full width */
-        text-align: center; /* Center the links */
-        margin-top: 10px; /* Add spacing between the logo and the nav */
+        width: 100%; /* Ensure the navigation takes up the full width */
+        flex-direction: column;
+        align-items: center;
+        justify-content: center; /* Center the links */
     }
 
     .nav a {
-        margin-left: 0; /* Remove left margin on small screens */
-        margin-bottom: 10px; /* Add bottom margin for spacing */
+        margin-left: 0;
+        margin-bottom: 10px; /* Add space between links */
+        text-align: center; /* Center-align the text */
+    }
+
+    .hero {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero-text {
+        margin-bottom: 20px; /* Space below the text */
+    }
+
+    .hero-image .image-placeholder {
+        width: 100%; /* Ensure the image does not exceed container width */
+        max-width: 100%; /* Prevents the image from overflowing */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .info-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 100%; /* Make the card full width */
+        max-width: 400px; /* Set a max width to avoid stretching */
+        margin-bottom: 20px; /* Space between cards */
     }
 }
